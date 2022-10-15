@@ -3021,30 +3021,6 @@ class ApiClientTest extends BaseTest {
     }
 
     @Test
-    void setTimer1Event() {
-        final EventAction action = client1 -> {
-        };
-
-        Assertions.assertDoesNotThrow(() ->
-                getClient().setTimer1Event(action));
-
-        Assertions.assertDoesNotThrow(() ->
-                getClient().setTimer1Event(null));
-    }
-
-    @Test
-    void setTimer2Event() {
-        final EventAction action = client1 -> {
-        };
-
-        Assertions.assertDoesNotThrow(() ->
-                getClient().setTimer2Event(action));
-
-        Assertions.assertDoesNotThrow(() ->
-                getClient().setTimer2Event(null));
-    }
-
-    @Test
     void setItemDeletedEvent() {
         final ExtendedEventAction<ItemDeletedEvent> event = (client1, eventData) -> {
         };
