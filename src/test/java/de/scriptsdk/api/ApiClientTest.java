@@ -24,7 +24,7 @@ class ApiClientTest extends BaseTest {
         final Version version = new Version(1, 0, 0, 0);
 
         Assertions.assertDoesNotThrow(() ->
-                getClient().authenthicate(languageType, version));
+                getClient().authenticate(languageType, version));
     }
 
     @Test

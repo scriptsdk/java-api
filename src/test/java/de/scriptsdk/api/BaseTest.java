@@ -18,8 +18,13 @@ public abstract class BaseTest {
     static void prepareStage() {
         client = new ApiClient("localhost", 47602);
         if (Objects.equals(client.isStealthRunning(), true)) {
-            client.authenthicate(LanguageType.OTHER, new Version(1, 0, 0, 0));
+            client.authenticate(LanguageType.OTHER, new Version(1, 0, 0, 0));
         }
+    }
+
+    @AfterAll
+    static void finalizeStage() {
+        client.revokeAuthentication();
     }
 
     public ApiClient getClient() {
@@ -43,6 +48,7 @@ public abstract class BaseTest {
         if (Objects.equals(getClient().isStealthRunning(), false)) {
             Assertions.fail("No Unit-Test without Stealth client");
         }
+
 
         if (Objects.equals(getClient().isConnected(), false)) {
             getClient().connect();

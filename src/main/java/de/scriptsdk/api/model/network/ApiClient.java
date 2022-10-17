@@ -75,7 +75,7 @@ public class ApiClient {
         this.targetHookIsEnabled = targetHookIsEnabled;
     }
 
-    public void authenthicate(LanguageType languageType, Version version) {
+    public void authenticate(LanguageType languageType, Version version) {
         if (Objects.equals(client.connect(), true)) {
 
             PacketWriter writer = new PacketWriter().
@@ -84,6 +84,10 @@ public class ApiClient {
 
             client.send(PacketType.LANG_VERSION, writer);
         }
+    }
+
+    public Boolean revokeAuthentication() {
+        return client.disconnect();
     }
 
     public void confirmTrade(Integer tradeNumber) {
