@@ -33,8 +33,10 @@ import de.scriptsdk.core.model.network.PacketClient;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.UUID;
 
 public class ApiClient {
+
     final PacketClient client;
     private final EventHandler handler;
     private Integer contextDelay;
@@ -47,6 +49,22 @@ public class ApiClient {
         this.setContextDelay(0);
         this.handler = new EventHandler(this);
         client.setOnEventAction(handler::onEventAction);
+    }
+
+    public String getApiClientUrl() {
+        return client.getUrl();
+    }
+
+    public Integer getApiClientPort() {
+        return client.getPort();
+    }
+
+    public UUID getApiClientId() {
+        return client.getId();
+    }
+
+    public ScriptState getApiClientScriptState() {
+        return client.getState();
     }
 
     public Boolean isTargetHookIsEnabled() {
