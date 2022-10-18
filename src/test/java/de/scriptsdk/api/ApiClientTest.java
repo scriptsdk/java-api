@@ -1709,27 +1709,27 @@ class ApiClientTest extends BaseTest {
     }
 
     @Test
-    void getFireResistence() {
+    void getFireResistance() {
         Assertions.assertDoesNotThrow(() ->
-                log(getClient().getFireResistence()));
+                log(getClient().getFireResistance()));
     }
 
     @Test
-    void getColdResistence() {
+    void getColdResistance() {
         Assertions.assertDoesNotThrow(() ->
-                log(getClient().getColdResistence()));
+                log(getClient().getColdResistance()));
     }
 
     @Test
-    void getPoisonResistence() {
+    void getPoisonResistance() {
         Assertions.assertDoesNotThrow(() ->
-                log(getClient().getPoisonResistence()));
+                log(getClient().getPoisonResistance()));
     }
 
     @Test
-    void getEnergyResistence() {
+    void getEnergyResistance() {
         Assertions.assertDoesNotThrow(() ->
-                log(getClient().getEnergyResistence()));
+                log(getClient().getEnergyResistance()));
     }
 
     @Test

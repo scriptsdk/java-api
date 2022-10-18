@@ -1004,19 +1004,19 @@ public class ApiClient {
         return client.exchange(PacketType.GET_SELF_PETS_CURRENT).readInteger();
     }
 
-    public Integer getFireResistence() {
+    public Integer getFireResistance() {
         return client.exchange(PacketType.GET_SELF_FIRE_RESIST).readInteger();
     }
 
-    public Integer getColdResistence() {
+    public Integer getColdResistance() {
         return client.exchange(PacketType.GET_SELF_COLD_RESIST).readInteger();
     }
 
-    public Integer getPoisonResistence() {
+    public Integer getPoisonResistance() {
         return client.exchange(PacketType.GET_SELF_POISON_RESIST).readInteger();
     }
 
-    public Integer getEnergyResistence() {
+    public Integer getEnergyResistance() {
         return client.exchange(PacketType.GET_SELF_ENERGY_RESIST).readInteger();
     }
 
