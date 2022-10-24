@@ -1,7 +1,7 @@
 package de.scriptsdk.api.model.account;
 
-import de.scriptsdk.api.enums.Gender;
 import de.scriptsdk.api.enums.City;
+import de.scriptsdk.api.enums.Gender;
 import de.scriptsdk.api.enums.Race;
 import de.scriptsdk.api.enums.SkillType;
 import de.scriptsdk.core.interfaces.Serializable;
@@ -18,7 +18,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class CharacterCreationRequest implements Serializable {
-    private String profileNam = "";
+    private String profileName = "";
     private String shardName = "";
     private String charName = "";
     private Gender gender = Gender.FEMALE;
@@ -40,7 +40,7 @@ public class CharacterCreationRequest implements Serializable {
     @Override
     public void serialize(PacketWriter writer) {
 
-        writer.writeString(profileNam);
+        writer.writeString(profileName);
         writer.writeString(shardName);
         writer.writeString(charName);
 

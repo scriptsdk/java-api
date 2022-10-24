@@ -5,10 +5,12 @@ import de.scriptsdk.api.interfaces.event.EventReadable;
 import de.scriptsdk.api.model.mobile.io.EventReader;
 import de.scriptsdk.core.interfaces.Enumerable;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public final class MoveRejectionEvent implements EventReadable {
     private Integer sourceX;
     private Integer sourceY;

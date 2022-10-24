@@ -3,10 +3,12 @@ package de.scriptsdk.api.model.event;
 import de.scriptsdk.api.interfaces.event.EventReadable;
 import de.scriptsdk.api.model.mobile.io.EventReader;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public final class GraphicalEffectEvent implements EventReadable {
 
     private Integer fixedDir;
@@ -20,50 +22,6 @@ public final class GraphicalEffectEvent implements EventReadable {
     private Integer destZ;
     private Integer type;
     private Integer itemId;
-
-    public Long getSrcId() {
-        return srcId;
-    }
-
-    public Integer getSrcZ() {
-        return srcZ;
-    }
-
-    public Integer getSrcX() {
-        return srcX;
-    }
-
-    public Integer getSrcY() {
-        return srcY;
-    }
-
-    public Long getDestId() {
-        return destId;
-    }
-
-    public Integer getDestX() {
-        return destX;
-    }
-
-    public Integer getDestY() {
-        return destY;
-    }
-
-    public Integer getDestZ() {
-        return destZ;
-    }
-
-    public Integer getType() {
-        return type;
-    }
-
-    public Integer getItemId() {
-        return itemId;
-    }
-
-    public Integer getFixedDir() {
-        return fixedDir;
-    }
 
     @Override
     public void deserialize(EventReader reader) {

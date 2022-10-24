@@ -791,7 +791,7 @@ public class ApiClient {
         client.send(PacketType.EQUIP_LAST_WEAPON);
     }
 
-    public void setUnequipItemsMacro() {
+    public void setUnEquipItemsMacro() {
         client.send(PacketType.UNEQUIP_ITEMS_SET_MACRO);
     }
 

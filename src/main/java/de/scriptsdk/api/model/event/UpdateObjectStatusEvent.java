@@ -3,10 +3,12 @@ package de.scriptsdk.api.model.event;
 import de.scriptsdk.api.interfaces.event.EventReadable;
 import de.scriptsdk.api.model.mobile.io.EventReader;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public final class UpdateObjectStatusEvent implements EventReadable {
 
     private Long id;
@@ -16,34 +18,6 @@ public final class UpdateObjectStatusEvent implements EventReadable {
     private Integer maximumMana;
     private Integer currentStamina;
     private Integer maximumStamina;
-
-    public Long getId() {
-        return id;
-    }
-
-    public Integer getCurrentLife() {
-        return currentLife;
-    }
-
-    public Integer getMaximumLife() {
-        return maximumLife;
-    }
-
-    public Integer getCurrentMana() {
-        return currentMana;
-    }
-
-    public Integer getMaximumMana() {
-        return maximumMana;
-    }
-
-    public Integer getCurrentStamina() {
-        return currentStamina;
-    }
-
-    public Integer getMaximumStamina() {
-        return maximumStamina;
-    }
 
     @Override
     public void deserialize(EventReader reader) {

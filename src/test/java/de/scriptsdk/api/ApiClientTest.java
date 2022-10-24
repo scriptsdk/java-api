@@ -2234,7 +2234,7 @@ class ApiClientTest extends BaseTest {
     @Test
     void setUnequipItemsMacro() {
         Assertions.assertDoesNotThrow(() ->
-                getClient().setUnequipItemsMacro());
+                getClient().setUnEquipItemsMacro());
     }
 
     @Test
