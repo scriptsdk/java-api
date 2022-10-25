@@ -1,5 +1,6 @@
-package de.scriptsdk.api;
+package de.scriptsdk.api.model.network;
 
+import de.scriptsdk.api.BaseApiTest;
 import de.scriptsdk.api.enums.*;
 import de.scriptsdk.api.interfaces.event.EventAction;
 import de.scriptsdk.api.interfaces.event.ExtendedEventAction;
@@ -17,7 +18,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
-class ApiClientTest extends BaseTest {
+class ApiClientTest extends BaseApiTest {
     @Test
     void authenthicate() {
         final LanguageType languageType = LanguageType.OTHER;
@@ -3406,11 +3407,5 @@ class ApiClientTest extends BaseTest {
 
         Assertions.assertDoesNotThrow(() ->
                 getClient().setObjectStatusEvent(null));
-    }
-
-    @Test
-    void getPing() {
-        Assertions.assertDoesNotThrow(() ->
-                log(getClient().getPing("play.uovnv.com", 2593, 2)));
     }
 }
