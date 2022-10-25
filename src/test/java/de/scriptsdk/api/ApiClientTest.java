@@ -3407,4 +3407,10 @@ class ApiClientTest extends BaseTest {
         Assertions.assertDoesNotThrow(() ->
                 getClient().setObjectStatusEvent(null));
     }
+
+    @Test
+    void getPing() {
+        Assertions.assertDoesNotThrow(() ->
+                log(getClient().getPing("play.uovnv.com", 2593, 2)));
+    }
 }
