@@ -7,6 +7,10 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class NetworkHelper {
     public Integer getPing(String url, Integer port, Integer tryout) {
 

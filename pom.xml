@@ -5,7 +5,7 @@
 
     <groupId>de.scriptsdk</groupId>
     <artifactId>api</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <name>api</name>
 
     <properties>
@@ -64,7 +64,7 @@
         <dependency>
             <groupId>de.scriptsdk</groupId>
             <artifactId>core</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
         </dependency>
 
         <dependency>

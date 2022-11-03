@@ -24,7 +24,9 @@ public abstract class BaseApiTest {
 
     @AfterAll
     static void finalizeStage() {
-        client.revokeAuthentication();
+        if (Objects.equals(client.revokeAuthentication(), false)) {
+            throw new BaseException(" Failed to dispose communication to stealth!");
+        }
     }
 
     public ApiClient getClient() {
@@ -48,7 +50,6 @@ public abstract class BaseApiTest {
         if (Objects.equals(getClient().isStealthRunning(), false)) {
             Assertions.fail("No Unit-Test without Stealth client");
         }
-
 
         if (Objects.equals(getClient().isConnected(), false)) {
             getClient().connect();

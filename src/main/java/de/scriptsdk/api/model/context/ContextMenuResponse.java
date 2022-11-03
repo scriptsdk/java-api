@@ -8,15 +8,19 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 public class ContextMenuResponse implements Deserializable {
-    Long id;
-    Integer index;
-    Boolean newCliloc;
-    BaseList<ContextMenuEntryResponse> entries;
+    Long id = 0L;
+    Integer index = 0;
+    Boolean newCliloc = false;
+    BaseList<ContextMenuEntryResponse> entries = new BaseList<>();
 
     @Override
     public void deserialize(PacketReader reader) {

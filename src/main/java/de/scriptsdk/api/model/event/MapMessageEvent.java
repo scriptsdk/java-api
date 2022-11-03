@@ -1,19 +1,25 @@
 package de.scriptsdk.api.model.event;
 
 import de.scriptsdk.api.interfaces.event.EventReadable;
-import de.scriptsdk.api.model.mobile.io.EventReader;
+import de.scriptsdk.api.model.io.EventReader;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 public final class MapMessageEvent implements EventReadable {
 
-    private Long id;
-    private Integer y;
-    private Integer x;
+    private Long id = 0L;
+    private Integer y = 0;
+    private Integer x = 0;
 
     @Override
     public void deserialize(EventReader reader) {

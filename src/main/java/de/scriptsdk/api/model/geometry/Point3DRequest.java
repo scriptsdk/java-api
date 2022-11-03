@@ -3,14 +3,22 @@ package de.scriptsdk.api.model.geometry;
 import de.scriptsdk.core.interfaces.Serializable;
 import de.scriptsdk.core.model.io.PacketWriter;
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Point3DRequest implements Serializable {
-    private Integer x;
-    private Integer y;
-    private Integer z;
+    private Integer x = 0;
+    private Integer y = 0;
+    private Integer z = 0;
 
     public Integer getX() {
         return x;

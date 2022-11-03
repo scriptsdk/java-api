@@ -2,6 +2,10 @@ package de.scriptsdk.api.enums;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum LineOfSightType implements Enumerable {
     SPHERE(1),
     SPHERE_ADVANCED(2),

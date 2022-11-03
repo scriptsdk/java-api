@@ -5,6 +5,10 @@ import de.scriptsdk.core.interfaces.Enumerable;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum LineOfSightOption implements Enumerable {
     NONE(0),
     LOS_SPHERE_CHECK_CORNERS(0x100, LineOfSightType.SPHERE, LineOfSightType.SPHERE_ADVANCED),

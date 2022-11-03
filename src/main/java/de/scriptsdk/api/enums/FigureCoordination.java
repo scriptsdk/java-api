@@ -2,6 +2,10 @@ package de.scriptsdk.api.enums;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum FigureCoordination implements Enumerable {
     WORLD(0),
     SCREEN(1);

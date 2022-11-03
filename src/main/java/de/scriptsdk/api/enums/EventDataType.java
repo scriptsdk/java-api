@@ -3,6 +3,10 @@ package de.scriptsdk.api.enums;
 import de.scriptsdk.core.enums.io.DataType;
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum EventDataType implements Enumerable {
     STRING(0, DataType.STRING),
     CARDINAL(1, DataType.CARDINAL),

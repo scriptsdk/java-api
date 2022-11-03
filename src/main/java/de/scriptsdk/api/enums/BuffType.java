@@ -2,6 +2,10 @@ package de.scriptsdk.api.enums;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum BuffType implements Enumerable {
     DISMOUNT_PREVENTION(0x3E9),
     NO_REARM(0x3EA),

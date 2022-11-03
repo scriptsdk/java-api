@@ -13,8 +13,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
-@AllArgsConstructor
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 public class CharacterCreationRequest implements Serializable {

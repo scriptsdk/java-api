@@ -7,16 +7,20 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
 public final class ContextMenuEntryResponse implements Deserializable {
 
-    private Integer tag;
-    private Long id;
-    private Integer flags;
-    private Integer color;
+    private Integer tag = 0;
+    private Long id = 0L;
+    private Integer flags = 0;
+    private Integer color = 0;
 
     @Override
     public void deserialize(PacketReader reader) {

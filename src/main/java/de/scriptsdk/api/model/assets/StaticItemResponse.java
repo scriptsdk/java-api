@@ -7,9 +7,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @EqualsAndHashCode
 public final class StaticItemResponse implements Deserializable {
     private Integer tile = 0;

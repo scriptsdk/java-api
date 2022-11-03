@@ -7,15 +7,19 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @EqualsAndHashCode
 public final class TileResultResponse implements Deserializable {
     private Integer tile = 0;
-    private Integer x;
-    private Integer y;
-    private Integer z;
+    private Integer x = 0;
+    private Integer y = 0;
+    private Integer z = 0;
 
     @Override
     public void deserialize(PacketReader reader) {

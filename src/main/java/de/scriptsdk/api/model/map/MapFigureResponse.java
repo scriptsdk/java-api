@@ -1,16 +1,20 @@
 package de.scriptsdk.api.model.map;
 
-import de.scriptsdk.core.interfaces.Serializable;
-import de.scriptsdk.core.model.io.PacketWriter;
 import de.scriptsdk.api.enums.BrushStyle;
 import de.scriptsdk.api.enums.Facet;
 import de.scriptsdk.api.enums.FigureCoordination;
 import de.scriptsdk.api.enums.FigureKind;
+import de.scriptsdk.core.interfaces.Serializable;
+import de.scriptsdk.core.model.io.PacketWriter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,10 +22,10 @@ import lombok.NoArgsConstructor;
 public final class MapFigureResponse implements Serializable {
     private FigureKind figureKind = FigureKind.LINE;
     private FigureCoordination figureCoordination = FigureCoordination.WORLD;
-    private int x1;
-    private int y1;
-    private int x2;
-    private int y2;
+    private int x1 = 0;
+    private int y1 = 0;
+    private int x2 = 0;
+    private int y2 = 0;
     private long brushColor = 0L;
     private BrushStyle brushStyle = BrushStyle.SOLID;
     private long color = 0L;

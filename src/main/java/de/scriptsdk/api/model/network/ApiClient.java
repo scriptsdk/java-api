@@ -20,6 +20,7 @@ import de.scriptsdk.api.model.mobile.ExtendedPlayerInfoResponse;
 import de.scriptsdk.api.model.process.ProcessHelper;
 import de.scriptsdk.api.model.properties.ClilocPropertyResponse;
 import de.scriptsdk.api.model.system.ExtendedScriptInfoResponse;
+import de.scriptsdk.api.model.system.ScriptItemInfoResponse;
 import de.scriptsdk.api.model.system.StealthInfoResponse;
 import de.scriptsdk.api.model.system.Version;
 import de.scriptsdk.api.model.target.TargetInfoResponse;
@@ -35,6 +36,10 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class ApiClient {
 
     final PacketClient client;
@@ -3151,5 +3156,25 @@ public class ApiClient {
             }
             this.handler.setObjectStatusEvent(event);
         }
+    }
+
+    public BaseList<ScriptItemInfoResponse> getScriptItems() {
+        return client.exchange(PacketType.GET_SCRIPT_LIST).readList(packetReader -> packetReader.readObject(ScriptItemInfoResponse.class));
+
+    }
+
+    public Boolean isCompatible() {
+        StealthInfoResponse response = this.getStealthInfo();
+        Version version = response.getVersion();
+
+        if (version.getMajor() < 9) {
+            return false;
+        }
+
+        if (version.getMinor() < 4) {
+            return false;
+        }
+
+        return response.getGitRevisionNumber() >= 1511;
     }
 }

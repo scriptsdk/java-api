@@ -5,6 +5,10 @@ import de.scriptsdk.api.model.event.*;
 import de.scriptsdk.core.interfaces.Enumerable;
 
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum EventType implements Enumerable {
     ITEM_INFO(0, ItemInfoEvent.class),
     ITEM_DELETED(1, ItemDeletedEvent.class),

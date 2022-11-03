@@ -2,6 +2,10 @@ package de.scriptsdk.api.model.entity;
 
 import de.scriptsdk.api.model.network.ApiClient;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public abstract class ApiEntity {
     protected final ApiClient client;
 

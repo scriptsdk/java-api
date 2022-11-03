@@ -9,9 +9,13 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigInteger;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @EqualsAndHashCode
 public final class StaticTileResponse implements Deserializable {
     private BigInteger flags = BigInteger.valueOf(0L);

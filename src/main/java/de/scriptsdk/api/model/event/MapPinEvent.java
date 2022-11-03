@@ -1,21 +1,27 @@
 package de.scriptsdk.api.model.event;
 
 import de.scriptsdk.api.interfaces.event.EventReadable;
-import de.scriptsdk.api.model.mobile.io.EventReader;
+import de.scriptsdk.api.model.io.EventReader;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 public final class MapPinEvent implements EventReadable {
 
-    private Long id;
-    private Integer action;
-    private Integer pinId;
-    private Integer x;
-    private Integer y;
+    private Long id = 0L;
+    private Integer action = 0;
+    private Integer pinId = 0;
+    private Integer x = 0;
+    private Integer y = 0;
 
     @Override
     public void deserialize(EventReader reader) {

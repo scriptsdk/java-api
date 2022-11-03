@@ -7,7 +7,7 @@ import de.scriptsdk.api.interfaces.event.EventReadable;
 import de.scriptsdk.api.interfaces.event.ExtendedEventAction;
 import de.scriptsdk.api.model.entity.ApiEntity;
 import de.scriptsdk.api.model.event.*;
-import de.scriptsdk.api.model.mobile.io.EventReader;
+import de.scriptsdk.api.model.io.EventReader;
 import de.scriptsdk.api.model.network.ApiClient;
 import de.scriptsdk.core.interfaces.Enumerable;
 import de.scriptsdk.core.model.io.PacketReader;
@@ -16,6 +16,10 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class EventHandler extends ApiEntity {
 
     private ExtendedEventAction<ItemInfoEvent> itemInfoEvent;

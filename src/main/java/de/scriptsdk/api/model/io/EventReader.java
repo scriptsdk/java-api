@@ -1,4 +1,4 @@
-package de.scriptsdk.api.model.mobile.io;
+package de.scriptsdk.api.model.io;
 
 import de.scriptsdk.api.enums.EventDataType;
 import de.scriptsdk.api.exceptions.event.EventException;
@@ -11,6 +11,10 @@ import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public class EventReader {
     private final PacketReader reader;
 

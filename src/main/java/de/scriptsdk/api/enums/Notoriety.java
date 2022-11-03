@@ -2,7 +2,12 @@ package de.scriptsdk.api.enums;
 
 import de.scriptsdk.core.interfaces.Enumerable;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 public enum Notoriety implements Enumerable {
+    INVALID(0),
     INNOCENT(1),
     ALLY(2),
     CAN_BE_ATTACKED(3),

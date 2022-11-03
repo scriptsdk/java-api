@@ -8,6 +8,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

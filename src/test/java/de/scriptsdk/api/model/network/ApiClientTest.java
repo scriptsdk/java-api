@@ -3408,4 +3408,16 @@ class ApiClientTest extends BaseApiTest {
         Assertions.assertDoesNotThrow(() ->
                 getClient().setObjectStatusEvent(null));
     }
+
+    @Test
+    void getScriptItems() {
+        Assertions.assertDoesNotThrow(() ->
+                log(getClient().getScriptItems()));
+    }
+
+    @Test
+    void isCompatible() {
+        Assertions.assertDoesNotThrow(() ->
+                log(getClient().isCompatible()));
+    }
 }

@@ -1,14 +1,18 @@
 package de.scriptsdk.api.model.mobile;
 
+import de.scriptsdk.api.enums.Race;
 import de.scriptsdk.core.interfaces.Deserializable;
 import de.scriptsdk.core.interfaces.Enumerable;
 import de.scriptsdk.core.model.io.PacketReader;
-import de.scriptsdk.api.enums.Race;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,14 +23,14 @@ public final class ExtendedPlayerInfoResponse implements Deserializable {
     private Integer statCap = 0;
     private Integer maximumPets = 0;
     private Integer currentPets = 0;
-    private Integer currentFireResistence = 0;
-    private Integer currentColdResistence = 0;
-    private Integer currentPoisonResistence = 0;
-    private Integer currentEnergyResistence = 0;
-    private Integer maximumFireResistence = 0;
-    private Integer maximumColdResistence = 0;
-    private Integer maximumPoisonResistence = 0;
-    private Integer maximumEnergyResistence = 0;
+    private Integer currentFireResistance = 0;
+    private Integer currentColdResistance = 0;
+    private Integer currentPoisonResistance = 0;
+    private Integer currentEnergyResistance = 0;
+    private Integer maximumFireResistance = 0;
+    private Integer maximumColdResistance = 0;
+    private Integer maximumPoisonResistance = 0;
+    private Integer maximumEnergyResistance = 0;
     private Integer tithingPoints = 0;
     private Integer luck = 0;
     private Integer minimumDamage = 0;
@@ -61,20 +65,20 @@ public final class ExtendedPlayerInfoResponse implements Deserializable {
         setStatCap(reader.readWord());
         setCurrentPets(reader.readSmallInteger());
         setMaximumPets(reader.readSmallInteger());
-        setCurrentFireResistence(reader.readWord());
-        setCurrentColdResistence(reader.readWord());
-        setCurrentPoisonResistence(reader.readWord());
-        setCurrentEnergyResistence(reader.readWord());
+        setCurrentFireResistance(reader.readWord());
+        setCurrentColdResistance(reader.readWord());
+        setCurrentPoisonResistance(reader.readWord());
+        setCurrentEnergyResistance(reader.readWord());
         setLuck(reader.readSmallInteger());
         setMinimumDamage(reader.readWord());
         setMaximumDamage(reader.readWord());
         setTithingPoints(reader.readInteger());
 
         setMaximumArmor(reader.readWord());
-        setMaximumFireResistence(reader.readWord());
-        setMaximumColdResistence(reader.readWord());
-        setMaximumPoisonResistence(reader.readWord());
-        setMaximumEnergyResistence(reader.readWord());
+        setMaximumFireResistance(reader.readWord());
+        setMaximumColdResistance(reader.readWord());
+        setMaximumPoisonResistance(reader.readWord());
+        setMaximumEnergyResistance(reader.readWord());
         setDefenseChance(reader.readWord());
         setMaximumDefenseChance(reader.readWord());
         setHitChanceIncrease(reader.readWord());

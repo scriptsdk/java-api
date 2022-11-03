@@ -7,6 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author Crome696
+ * @version 1.0
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
